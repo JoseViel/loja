@@ -58,6 +58,10 @@ Conexao::desconectar();
                     <input type="text" class="form-control" id="txtTelefone" name="txtTelefone" value="<?php echo $cliente['telefone']; ?>">
                 </div>
                 <div class="input-field col s5">
+                    <label for="lblIdade">Informe a Nova Idade do Cliente: </label>
+                    <input type="text" class="form-control" id="txtIdade" name="txtIdade" value="<?php echo $cliente['idade']; ?>">
+                </div>
+                <div class="input-field col s5">
                     <label for="lblEndereco">Informe o Novo Endereço do Cliente: </label>
                     <input type="text" class="form-control" id="txtEndereco" name="txtEndereco" value="<?php echo $cliente['endereco'] ?>">
                 </div>

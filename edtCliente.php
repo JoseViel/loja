@@ -22,5 +22,5 @@
     }
 
     header("location:lstCliente.php");
-    
+
 ?> 
