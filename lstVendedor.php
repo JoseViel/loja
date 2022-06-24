@@ -77,7 +77,8 @@ Conexao::desconectar();
                           <?php echo $vendedor['id']; ?>">
                                     <i class="material-icons">edit</i>
                             </td>
-                            <td> <a class="btn-floating btn-small waves-effect waves-light red">
+                            <td> <a class="btn-floating btn-small waves-effect waves-light red" onclick="JavaScript:location.href='remVendedor.php?id=' +
+                          <?php echo $vendedor['id']; ?>">
                                     <i class="material-icons">delete</i>
                             </td>
                         </tr>

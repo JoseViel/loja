@@ -73,7 +73,8 @@ Conexao::desconectar();
                           <?php echo $produto['id']; ?>">
                                     <i class="material-icons">edit</i>
                             </td>
-                            <td> <a class="btn-floating btn-small waves-effect waves-light red">
+                            <td> <a class="btn-floating btn-small waves-effect waves-light red" onclick="JavaScript:location.href='remProduto.php?id=' +
+                          <?php echo $produto['id']; ?>">
                                     <i class="material-icons">delete</i>
                             </td>
                         </tr>
