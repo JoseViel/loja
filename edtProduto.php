@@ -2,17 +2,17 @@
 
     include 'conexao.php'; 
 
-    $id = trim($_POST['id']);
     $nome = trim($_POST['txtNome']); 
     $valor = trim($_POST['txtValor']);
     $descricao = trim($_POST['txtDescricao']); 
+    $id = trim($_POST['id']);
 
-    if (!empty($id) && !empty($nome) && !empty($valor) && !empty($descricao)){
+    if (!empty($nome) && !empty($valor) && !empty($descricao) && !empty($id)){
         $pdo = Conexao::conectar(); 
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
         $sql = "UPDATE produto SET nome=?,valor=?,descricao=? WHERE id=?"; 
         $query = $pdo->prepare($sql);
-        $query->execute(array($id, $nome, $valor, $descricao));
+        $query->execute(array($nome, $valor, $descricao, $id));
         Conexao::desconectar(); 
     }
 
