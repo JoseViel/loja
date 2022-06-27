@@ -36,11 +36,11 @@
   <!-- menu lateral -->
   <ul id="slide-out" class="sidenav">
     <!-- <div class="teal lighten-5"> -->
-    <li><div class="user-view">
+    <li><div class="admin-view">
 
-      <a href="#user"><img class="circle" src="img/admin.png"></a>
-      <a href="txtNome"><span class="white-text name"> <?php $user['nome'] ?></span></a>
-      <a href="txtEmail"><span class="white-text email"><?php $user['email']?></span></a>
+      <a href="#admin"><img class="circle" src="img/admin.png"></a>
+      <a href="txtNome"><span class="white-text name"> <?php $admin['nome'] ?></span></a>
+      <a href="txtEmail"><span class="white-text email"><?php $admin['email']?></span></a>
     </div></li>
     <li><a href="lstCliente.php"><i class="material-icons">people</i>Lista de Clientes</a></li>
     <li><a href="lstVendedor.php"><i class="material-icons">person</i>Lista de Vendedores</a></li>
