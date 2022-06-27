@@ -17,9 +17,9 @@
                 <form method="POST">
                     <input type="text" name="nome" placeholder ="Nome de Usuario" autofocus>
                     <input type="password" name="senha" placeholder="Sua Senha" autofocus>
-                    <input onclick="alert('Seu login foi realizado com sucesso!')"  type="submit" value="Entrar">
+                    <input onclick="alert('Seu Login foi Realizado com Sucesso!')"  type="submit" value="Entrar">
                 </form>
-                <p> Ainda não tem uma conta? <a href="#"> Criar uma conta</a></p>         
+                <p> Ainda não tem uma Conta? <a href="#"> Criar uma conta.</a></p>         
         </div>
     </section>
 </body>

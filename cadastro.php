@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,11 +15,11 @@
                 <img src="img/icone.png"> 
             </div>
                 <form method="POST">
-                    <input type="text" name="nome" placeholder ="Nome de usuario" autofocus>
-                    <input type="email" name="email" placeholder ="Seu email" autofocus>
-                    <input type="password" name="senha" placeholder="Sua senha" autofocus>
-                    <input type="assword" name="senha" placeholder ="Confirme sua senha" autofocus>
-                    <input onclick="alert('Seu cadastro foi realziado com sucesso')" type="submit" value="Entrar">
+                    <input type="text" name="nome" placeholder ="Nome de Usuario" autofocus>
+                    <input type="email" name="email" placeholder ="Seu Email" autofocus>
+                    <input type="password" name="senha" placeholder="Sua Senha" autofocus>
+                    <input type="password" name="senha" placeholder ="Confirme sua Senha" autofocus>
+                    <input onclick="alert('Seu Cadastro foi Realziado com Sucesso!')" type="submit" value="Entrar">
                 </form>   
     </section>
 </body>

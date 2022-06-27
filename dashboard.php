@@ -23,11 +23,11 @@
     <div class="nav-wrapper">
       <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
       <ul id="nav-mobile">
-        <li><a href="">Vendas</a></li>
-        <li><a href="">Vendedores</a></li>
-        <li><a href="">Clientes</a></li>
-        <li><a href="">Produtos</a></li>
-        <li><a href="">Logout</a></li>
+        <li><a href="lstVendas.php">Vendas</a></li>
+        <li><a href="lstVendedor.php">Vendedores</a></li>
+        <li><a href="lstCliente.php">Clientes</a></li>
+        <li><a href="lstProduto.php">Produtos</a></li>
+        <li><a href="login.php">Logout</a></li>
       </ul>
     </div>
   </nav>
@@ -39,12 +39,12 @@
     <li><div class="user-view">
 
       <a href="#user"><img class="circle" src="img/admin.png"></a>
-      <a href="#name"><span class="white-text name"> Administrador123 </span></a>
-      <a href="#email"><span class="white-text email"> 123@gmail.com</span></a>
+      <a href="txtNome"><span class="white-text name"> <?php $user['nome'] ?></span></a>
+      <a href="txtEmail"><span class="white-text email"><?php $user['email']?></span></a>
     </div></li>
-    <li><a href=""><i class="material-icons">people</i>Lista de Clientes</a></li>
-    <li><a href=""><i class="material-icons">person</i>Lista de Vendedores</a></li>
-    <li><a href=""><i class="material-icons">storage</i>Lista de Vendas</a></li>
+    <li><a href="lstCliente.php"><i class="material-icons">people</i>Lista de Clientes</a></li>
+    <li><a href="lstVendedor.php"><i class="material-icons">person</i>Lista de Vendedores</a></li>
+    <li><a href="lstVendas.php"><i class="material-icons">storage</i>Lista de Vendas</a></li>
     <li></li>
     <!-- </div> -->
   </ul>
@@ -59,13 +59,13 @@
                         <div class="input-field">
                             <form method="GET" class="col s12" >
                                 <div class="input-field col s12">
-                               <h4> <div type="button" onclick="JavaScript:location.href=''"><img class="img_icon" src="img/vendedor.png" height="100px" width="100px"></div>
+                               <h4> <div type="button" onclick="JavaScript:location.href='lstVendedor.php'"><img class="img_icon" src="img/vendedor.png" height="100px" width="100px"></div>
                                 Vendedores
-                                <div type="button" onclick="JavaScript:location.href=''"><img class="img_icon" src="img/cliente.png" height="100px" width="100px"></div>
+                                <div type="button" onclick="JavaScript:location.href='lstCliente.php'"><img class="img_icon" src="img/cliente.png" height="100px" width="100px"></div>
                                 Clientes
-                                <div  type="button" onclick="JavaScript:location.href=''"><img class="img_icon" src="img/produto.png" height="100px" width="100px"></div>
+                                <div  type="button" onclick="JavaScript:location.href='lstProduto.php'"><img class="img_icon" src="img/produto.png" height="100px" width="100px"></div>
                                 Produtos
-                                <div  type="button" onclick="JavaScript:location.href=''"><img class="img_icon" src="img/vendas.png" height="100px" width="100px"></div>
+                                <div  type="button" onclick="JavaScript:location.href='lstVendas.php'"><img class="img_icon" src="img/vendas.png" height="100px" width="100px"></div>
                                 Vendas
                                 </h4>
                                 </div>
