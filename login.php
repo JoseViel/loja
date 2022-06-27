@@ -1,23 +1,24 @@
 <?php
-    $email = trim($_POST['email']); 
-    $senha = trim($_POST['password']); 
+    $user = trim($_POST['user']); 
+    $pwd = trim($_POST['password']); 
+
+    // echo $user . " - " .$pwd
 
    include 'conexao.php';
-   $sql = "select * from admin where login LIKE ?";
+   $sql = "select * from usuario where login LIKE ?";
    $pdo = Conexao::conectar(); 
    $query = $pdo->prepare($sql);
-   $query->execute (array($email));
-   $admin = $query->fetch(PDO::FETCH_ASSOC);
+   $query->execute (array($user));
+   $dados = $query->fetch(PDO::FETCH_ASSOC);
    Conexao::desconectar(); 
 
-   echo $senha . " - " . $admin['password']; 
+   echo $pwd . " - " . $dados['password']; 
 
-   if (md5($senha) == $admin['password']){
+   if (md5($pwd) == $dados['password']){
+    //  echo "passei aqui"; 
       session_start();
-      $_SESSION['login'] = $admin['login'];
-      $_SESSION['senha'] = $admin['password']; 
-     header("location:menu.php");
-   } else{
-      echo "Senha ou Email inválidos";
+      $_SESSION['login'] = $dados['login'];
+      $_SESSION['pwd'] = $dados['password']; 
+     header("location:dashboard.php");
    }
 ?>

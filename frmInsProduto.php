@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/746/746814.png">
+    <link rel="icon" href="img/icone.png"">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -16,7 +16,23 @@
     <title>Cadastro de Produtos</title>
 </head>
 
-<body style="background-color:#333333">
+<body style="background-color: #1b1f27;;">
+
+    <!-- menu suspenso -->
+    <nav class="black">
+        <div class="nav-wrapper">
+        <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
+        <ul id="nav-mobile">
+            <li><a href="lstVendas.php">Vendas</a></li>
+            <li><a href="lstVendedor.php">Vendedores</a></li>
+            <li><a href="lstCliente.php">Clientes</a></li>
+            <li><a href="lstProduto.php">Produtos</a></li>
+            <li><a href="login.php">Logout</a></li>
+        </ul>
+        </div>
+    </nav>
+
+
     <div class="container grey lighten-4 col s12">
         <div class="brown lighten-4 col s12">
             <h3>Cadastrar Novo Produto</h3>
@@ -24,17 +40,17 @@
         <div class="row">
             <form method="POST" action="insProduto.php" id="insProduto" class="col s12">
                 <div class="input-field col s8">
-                    <i class="material-icons prefix">account_circle</i>
+                    <i class="material-icons prefix">sell</i>
                     <label for="lblNome">Informe o Nome do Produto: </label>
                     <input type="text" class="form-control" id="txtNome" name="txtNome">
                 </div>
                 <div class="input-field col s5">
-                    <i class="material-icons prefix">face</i>
+                    <i class="material-icons prefix">money</i>
                     <label for="lblValor">Informe o Valor do Produto: </label>
                     <input type="text" class="form-control" id="txtValor" name="txtValor">
                 </div>
                 <div class="input-field col s5">
-                    <i class="material-icons prefix">place</i>
+                    <i class="material-icons prefix">description</i>
                     <label for="lblDescricao">Informe a Descrição do Produto: </label>
                     <input type="text" class="form-control" id="txtDescricao" name="txtDescricao">
                 </div>

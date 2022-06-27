@@ -16,11 +16,11 @@ Conexao::desconectar();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/746/746814.png">
+    <link rel="icon" href="img/icone.png">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -28,12 +28,27 @@ Conexao::desconectar();
     <title>Lista de Clientes</title>
 </head>
 
-<body style="background-color:#333333">
+<body>
+
+    <!-- menu suspenso -->
+    <nav class="black">
+        <div class="nav-wrapper">
+            <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
+            <ul id="nav-mobile">
+                <li><a href="lstVendas.php">Vendas</a></li>
+                <li><a href="lstVendedor.php">Vendedores</a></li>
+                <li><a href="lstCliente.php">Clientes</a></li>
+                <li><a href="lstProduto.php">Produtos</a></li>
+                <li><a href="login.php">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="row">
             <div class="col s12">
                 <h3 class=" white-text text-dark-3" class="text-orange">
-                    <div class="cliente"><img class="img" src="img/aaa.jpg" height="100px" width="100px"></div>
+                    <div class="cliente"><img class="img" src="img/cliente.png" height="100px" width="100px"></div>
                     LISTA DE CLIENTES
                 </h3>
                 <a class="btn-floating btn-large waves-effect waves-light green" onclick="JavaScript:location.href='frmInsCliente.php'"><i class="material-icons">add</i></a>
@@ -83,9 +98,9 @@ Conexao::desconectar();
                           <?php echo $cliente['id']; ?>">
                                     <i class="material-icons">edit</i>
                             </td>
-                            <td> <a class="btn-floating btn-small waves-effect waves-light red" onclick="JavaScript:location.href='remCliente.php?id=' +
-                          <?php echo $cliente['id']; ?>">
+                            <td> <a class="btn-floating btn-small waves-effect waves-light red" onclick="JavaScript:remover(<?php echo $cliente['id']; ?>)">
                                     <i class="material-icons">delete</i>
+                                </a>
                             </td>
                         </tr>
                     <?php
@@ -98,3 +113,11 @@ Conexao::desconectar();
 </body>
 
 </html>
+
+<script>
+    function remover(id) {
+        if (confirm('Excluir o cliente ' + id + '?')) {
+            location.href = 'remCliente.php?id=' + id;
+        }
+    }
+</script>

@@ -36,15 +36,15 @@
   <!-- menu lateral -->
   <ul id="slide-out" class="sidenav">
     <!-- <div class="teal lighten-5"> -->
-    <li><div class="admin-view">
+    <li><div class="user-view">
 
-      <a href="#admin"><img class="circle" src="img/admin.png"></a>
-      <a href="txtNome"><span class="white-text name"> <?php $admin['nome'] ?></span></a>
-      <a href="txtEmail"><span class="white-text email"><?php $admin['email']?></span></a>
+      <a href="#user"><img class="circle" src="img/admin.png"></a>
+      <a href=""><span class="white-text name"> Administrador123 </span></a>
+      <a href=""><span class="white-text email"> 123@gmail.com</span></a>
     </div></li>
-    <li><a href="lstCliente.php"><i class="material-icons">people</i>Lista de Clientes</a></li>
-    <li><a href="lstVendedor.php"><i class="material-icons">person</i>Lista de Vendedores</a></li>
-    <li><a href="lstVendas.php"><i class="material-icons">storage</i>Lista de Vendas</a></li>
+    <li><a style="color: white" href="lstCliente.php"><i style="color: white;" class="material-icons">people</i>Lista de Clientes</a></li>
+    <li><a style="color: white" href="lstVendedor.php"><i style="color: white;" class="material-icons">person</i>Lista de Vendedores</a></li>
+    <li><a  style="color: white" href="lstVendas.php"><i style="color: white" class="material-icons">storage</i>Lista de Vendas</a></li>
     <li></li>
     <!-- </div> -->
   </ul>
@@ -59,7 +59,7 @@
                         <div class="input-field">
                             <form method="GET" class="col s12" >
                                 <div class="input-field col s12">
-                               <h4> <div type="button" onclick="JavaScript:location.href='lstVendedor.php'"><img class="img_icon" src="img/vendedor.png" height="100px" width="100px"></div>
+                               <h4 style="color: #cbd0f7"> <div type="button" onclick="JavaScript:location.href='lstVendedor.php'"><img class="img_icon" src="img/vendedor.png" height="100px" width="100px"></div>
                                 Vendedores
                                 <div type="button" onclick="JavaScript:location.href='lstCliente.php'"><img class="img_icon" src="img/cliente.png" height="100px" width="100px"></div>
                                 Clientes
