@@ -15,11 +15,11 @@
                 <img src="img/icone.png"> 
             </div>
                 <form method="POST">
-                    <input type="text" name="nome" placeholder ="nome de usuario" autofocus>
-                    <input type="password" name="senha" placeholder="sua senha" autofocus>
-                    <input onclick="alert('seu login foi realizado com sucesso!')"  type="submit" value="Entrar">
+                    <input type="text" name="nome" placeholder ="Nome de Usuario" autofocus>
+                    <input type="password" name="senha" placeholder="Senha" autofocus>
+                    <input onclick="alert('Seu login foi realizado com Sucesso!')"  type="submit" value="Entrar">
                 </form>
-                <p> Ainda não tem uma conta? <a href="#"> Criar uma conta</a></p>         
+                <p> Ainda não tem uma conta? <a href="cadastroVendedor.php">Criar uma Conta.</a></p>         
         </div>
     </section>
 </body>

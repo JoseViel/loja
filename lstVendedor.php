@@ -52,8 +52,10 @@ Conexao::desconectar();
                     <div class="vendedor"><img class="img" src="img/vendedor.png" height="100px" width="100px"></div>
                     LISTA DE VENDEDORES
                 </h3>
+                <a class="btn-floating btn-large waves-effect waves-light grey darken-1 accent-3" onclick="JavaScript:location.href='dashboardVendedor.php'">
+                    <i class="material-icons">keyboard_backspace</i>
+                </a>
                 <a class="btn-floating btn-large waves-effect waves-light green" onclick="JavaScript:location.href='frmInsvendedor.php'"><i class="material-icons">add</i></a>
-
 
                 <div class="row">
                     <div class="input-field">
