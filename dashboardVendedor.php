@@ -1,3 +1,11 @@
+<?php
+
+if(!isset($_SESSION)) session_start();
+
+$id = $_SESSION['id'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -42,9 +50,9 @@
     </div></li>
     <li><a style="color: white" href="lstCliente.php"><i style="color: white;" class="material-icons">people</i>Lista de Clientes</a></li>
     <li><a style="color: white" href="lstVendedor.php"><i style="color: white;" class="material-icons">person</i>Lista de Vendedores</a></li>
-    <li><a  style="color: white" href=""><i style="color: white" class="material-icons">storage</i>Lista de Vendas</a></li>
+    <li><a  style="color: white"href=""><i style="color: white" class="material-icons">storage</i>Lista de Vendas</a></li>
     <li><a style="color: white" href="frmEdtVendedor.php"><i style="color: white;" class="material-icons">face</i>Editar Dados</a></li>
-    <li><a style="color: white" href="remVendedor.php"><i style="color: white;" class="material-icons" onclick="JavaScript:remover(<?php echo $vendedor['id'];?>)">remove</i>Deletar Conta</a></li>
+    <li><a style="color: white" onclick="JavaScript:remover(<?php echo $id?>)"><i style="color: white;" class="material-icons" >remove</i>Deletar Conta</a></li>
     <li></li>
     <!-- </div> -->
   </ul>
@@ -99,8 +107,10 @@
       });
 
       function remover(id) {
-        if (confirm('Excluir o vendedor ' + id + '?')) {
-            location.href = 'remVendedor.php?id=' + id;
+        var dialog = confirm('Excluir o vendedor ' + id + '?');
+        if (dialog) {
+          console.log("Conta deletada");
+           location.href = 'remVendedor.php?id=' + id;
         }
     }
     

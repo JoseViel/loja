@@ -1,6 +1,8 @@
 <?php
 
-$id = $_GET['id'];
+if(!isset($_SESSION)) session_start();
+
+$id = $_SESSION['id'];
 
 include 'conexao.php';
 

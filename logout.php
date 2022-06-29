@@ -4,6 +4,7 @@
     
     unset($_SESSION['email']);
     unset($_SESSION['senha']); 
+    unset($_SESSION['id']);
 
-    Header("location: choose.php"); 
+    header("location:choose.php"); 
 ?>

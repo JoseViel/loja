@@ -26,7 +26,7 @@
         <li><a href="lstVendedor.php">Vendedores</a></li>
         <li><a href="lstCliente.php">Clientes</a></li>
         <li><a href="lstProduto.php">Produtos</a></li>
-        <li><a href="login.php">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
       </ul>
     </div>
   </nav>

@@ -13,6 +13,6 @@
         Conexao::desconectar(); 
     }
 
-    header("location:loginCliente.php"); 
+    header("location:logout.php"); 
 
 ?>

@@ -22,7 +22,7 @@
     <div class="nav-wrapper">
       <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
       <ul id="nav-mobile">
-        <li><a href="choose.php">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
         <li><a href="lstProdutoCliente.php"> Produtos </a></li>
       </ul>
     </div>

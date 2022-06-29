@@ -13,6 +13,6 @@
         Conexao::desconectar(); 
     }
 
-    header("location:lstVendedor.php"); 
+    header("location:logout.php"); 
 
 ?>

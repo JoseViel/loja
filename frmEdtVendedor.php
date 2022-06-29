@@ -1,6 +1,8 @@
 <?php
 
-$id = $_GET['id'];
+if(!isset($_SESSION)) session_start();
+
+$id = $_SESSION['id'];
 
 include 'conexao.php';
 
@@ -44,7 +46,7 @@ Conexao::desconectar();
             <li><a href="lstVendedor.php">Vendedores</a></li>
             <li><a href="lstCliente.php">Clientes</a></li>
             <li><a href="lstProduto.php">Produtos</a></li>
-            <li><a href="login.php">Logout</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
         </div>
     </nav>

@@ -21,6 +21,6 @@
         Conexao::desconectar(); 
     }
 
-    header("location:lstCliente.php");
+    header("location:dashboardCliente.php");
 
 ?> 
