@@ -16,9 +16,24 @@
             </div>
             <p style="font-weight: bold; ">ENTRAR COMO:</p>
                 <form method="POST">
-                    <a href="loginCliente.php">Cliente</a>
-                    <a href="loginVendedor.php">Vendedor</a>
-                </form>   
+                <a style=  "margin-top: 12px;
+                    background-color: #252a34;
+                    border-radius: 8px;
+                    color: #5568fe;
+                    padding-left: 39%;
+                    padding-top: 15px;
+                    height: 35px;
+                    font-weight: bold;" href="loginCliente.php">Cliente</a>
+                    <a style= "margin-top: 12px;
+                    background-color: #252a34;
+                    border-radius: 8px;
+                    color: #5568fe;
+                    padding-left: 37%;
+                    padding-top: 15px;
+                    height: 35px;
+                    font-weight: bold;" href="loginVendedor.php">Vendedor</a>
+                </form>
+        </div>   
     </section>
 </body>
 </html>

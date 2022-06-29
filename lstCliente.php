@@ -17,7 +17,6 @@ Conexao::desconectar();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icone.png">
-    <link rel="stylesheet" href="style.css">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -28,7 +27,7 @@ Conexao::desconectar();
     <title>Lista de Clientes</title>
 </head>
 
-<body>
+<body style="background-color: #1b1f27;">
 
     <!-- menu suspenso -->
     <nav class="black">
@@ -39,7 +38,7 @@ Conexao::desconectar();
                 <li><a href="lstVendedor.php">Vendedores</a></li>
                 <li><a href="lstCliente.php">Clientes</a></li>
                 <li><a href="lstProduto.php">Produtos</a></li>
-                <li><a href="login.php">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
     </nav>
@@ -54,7 +53,7 @@ Conexao::desconectar();
                 <a class="btn-floating btn-large waves-effect waves-light grey darken-1 accent-3" onclick="JavaScript:location.href='dashboardVendedor.php'">
                     <i class="material-icons">keyboard_backspace</i>
                 </a>
-                <a class="btn-floating btn-large waves-effect waves-light green" onclick="JavaScript:location.href='frmInsCliente.php'"><i class="material-icons">add</i></a>
+                
                 <div class="row">
                     <div class="input-field">
                         <form action="lstCliente.php" method="GET" id="frmBuscaClientes" class="col s12">
@@ -79,8 +78,6 @@ Conexao::desconectar();
                         <th>Cidade</th>
                         <th>UF</th>
                         <th>Numero</th>
-                        <th>Editar</th>
-                        <th>Remover</th>
                     </tr>
                     <?php
                     foreach ($lstCliente as $cliente) {
@@ -95,13 +92,6 @@ Conexao::desconectar();
                             <td><?php echo $cliente['cidade']; ?></td>
                             <td><?php echo $cliente['uf']; ?></td>
                             <td><?php echo $cliente['numero']; ?></td>
-                            <td> <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:location.href='frmEdtCliente.php?id=' +
-                          <?php echo $cliente['id']; ?>">
-                                    <i class="material-icons">edit</i>
-                            </td>
-                            <td> <a class="btn-floating btn-small waves-effect waves-light red" onclick="JavaScript:remover(<?php echo $cliente['id']; ?>)">
-                                    <i class="material-icons">delete</i>
-                                </a>
                             </td>
                         </tr>
                     <?php
@@ -114,11 +104,3 @@ Conexao::desconectar();
 </body>
 
 </html>
-
-<script>
-    function remover(id) {
-        if (confirm('Excluir o cliente ' + id + '?')) {
-            location.href = 'remCliente.php?id=' + id;
-        }
-    }
-</script>

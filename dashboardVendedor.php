@@ -26,7 +26,7 @@
         <li><a href="lstVendedor.php">Vendedores</a></li>
         <li><a href="lstCliente.php">Clientes</a></li>
         <li><a href="lstProduto.php">Produtos</a></li>
-        <li><a href="choose.php">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
       </ul>
     </div>
   </nav>
@@ -38,12 +38,13 @@
     <li><div class="user-view">
 
       <a href="#user"><img class="circle" src="img/admin.png"></a>
-      <a href="#name"><span class="white-text name"> Administrador123 </span></a>
-      <a href="#email"><span class="white-text email"> 123@gmail.com</span></a>
+
     </div></li>
     <li><a style="color: white" href="lstCliente.php"><i style="color: white;" class="material-icons">people</i>Lista de Clientes</a></li>
     <li><a style="color: white" href="lstVendedor.php"><i style="color: white;" class="material-icons">person</i>Lista de Vendedores</a></li>
     <li><a  style="color: white" href=""><i style="color: white" class="material-icons">storage</i>Lista de Vendas</a></li>
+    <li><a style="color: white" href="frmEdtVendedor.php"><i style="color: white;" class="material-icons">face</i>Editar Dados</a></li>
+    <li><a style="color: white" href="remVendedor.php"><i style="color: white;" class="material-icons" onclick="JavaScript:remover(<?php echo $vendedor['id'];?>)">remove</i>Deletar Conta</a></li>
     <li></li>
     <!-- </div> -->
   </ul>
@@ -96,5 +97,11 @@
       $(document).ready(function(){
         $('.sidenav').sidenav();
       });
+
+      function remover(id) {
+        if (confirm('Excluir o vendedor ' + id + '?')) {
+            location.href = 'remVendedor.php?id=' + id;
+        }
+    }
     
     </script>

@@ -40,7 +40,7 @@ Conexao::desconectar();
         <li><a href="lstVendedor.php">Vendedores</a></li>
         <li><a href="lstCliente.php">Clientes</a></li>
         <li><a href="lstProduto.php">Produtos</a></li>
-        <li><a href="login.php">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
       </ul>
     </div>
   </nav>
@@ -92,8 +92,7 @@ Conexao::desconectar();
                           <?php echo $produto['id']; ?>">
                                     <i class="material-icons">edit</i>
                             </td>
-                            <td> <a class="btn-floating btn-small waves-effect waves-light red" onclick="JavaScript:location.href='remProduto.php?id=' +
-                          <?php echo $produto['id']; ?>">
+                            <td> <a class="btn-floating btn-small waves-effect waves-light red" onclick="JavaScript:remover(<?php echo $produto['id'];?>)">
                                     <i class="material-icons">delete</i>
                             </td>
                         </tr>
@@ -107,3 +106,11 @@ Conexao::desconectar();
 </body>
 
 </html>
+
+<script>
+    function remover(id) {
+        if (confirm('Excluir o produto ' + id + '?')) {
+            location.href = 'remProduto.php?id=' + id;
+        }
+    }
+</script>

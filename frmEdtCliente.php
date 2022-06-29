@@ -39,13 +39,6 @@ Conexao::desconectar();
     <nav class="black">
         <div class="nav-wrapper">
         <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
-        <ul id="nav-mobile">
-            <li><a href="lstVendas.php">Vendas</a></li>
-            <li><a href="lstVendedor.php">Vendedores</a></li>
-            <li><a href="lstCliente.php">Clientes</a></li>
-            <li><a href="lstProduto.php">Produtos</a></li>
-            <li><a href="login.php">Logout</a></li>
-        </ul>
         </div>
     </nav>
 
@@ -103,7 +96,7 @@ Conexao::desconectar();
                         Limpar <i class="material-icons">brush</i>
                     </button>
 
-                    <button class="btn waves-effect waves-light indigo" type="button" id="btnVoltar" onclick="JavaScript:location.href='lstCliente.php'">
+                    <button class="btn waves-effect waves-light indigo" type="button" id="btnVoltar" onclick="JavaScript:location.href='dashboardCliente.php'">
                         Voltar <i class="material-icons">arrow_back</i>
                     </button>
                 </div>

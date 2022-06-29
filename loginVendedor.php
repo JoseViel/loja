@@ -14,10 +14,10 @@
             <div>
                 <img src="img/icone.png"> 
             </div>
-                <form method="POST">
-                    <input type="text" name="nome" placeholder ="Nome de Usuario" autofocus>
+                <form method="POST" action="validaVendedor.php">
+                    <input type="text" name="email" placeholder ="Email" autofocus>
                     <input type="password" name="senha" placeholder="Senha" autofocus>
-                    <input onclick="alert('Seu login foi realizado com Sucesso!')"  type="submit" value="Entrar">
+                    <input type="submit" name="action" value="Entrar">
                 </form>
                 <p> Ainda não tem uma conta? <a href="cadastroVendedor.php">Criar uma Conta.</a></p>         
         </div>

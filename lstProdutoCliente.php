@@ -3,8 +3,8 @@
 include 'conexao.php';
 
 $pdo = Conexao::conectar();
-$sql = "select * from vendedor order by id;";
-$lstVendedor = $pdo->query($sql);
+$sql = "select * from produto order by id;";
+$lstProduto = $pdo->query($sql);
 Conexao::desconectar();
 
 ?>
@@ -19,48 +19,46 @@ Conexao::desconectar();
     <link rel="icon" href="img/icone.png">
 
     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Lista de Vendedores</title>
+    <title>Lista de Produtos</title>
 </head>
 
-<body style="background-color: #1b1f27;">
+<body>
 
-    <!-- menu suspenso -->
-    <nav class="black">
-        <div class="nav-wrapper">
-        <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
-        <ul id="nav-mobile">
-        <li><a href="lstVendas.php">Vendas</a></li>
-        <li><a href="lstVendedor.php">Vendedores</a></li>
-        <li><a href="lstCliente.php">Clientes</a></li>
-        <li><a href="lstProduto.php">Produtos</a></li>
+ <!-- menu suspenso -->
+ <nav class="black">
+    <div class="nav-wrapper">
+      <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
+      <ul id="nav-mobile">
+        <li><a href="lstProdutoCliente.php">Produtos</a></li>
         <li><a href="logout.php">Logout</a></li>
-        </ul>
-        </div>
-    </nav>
+      </ul>
+    </div>
+  </nav>
+
 
     <div class="container">
         <div class="row">
             <div class="col s12">
                 <h3 class=" white-text text-dark-3" class="text-orange">
-                    <div class="vendedor"><img class="img" src="img/vendedor.png" height="100px" width="100px"></div>
-                    LISTA DE VENDEDORES
+                    <div class="produto"><img class="img" src="img/produto.png" height="100px" width="100px"></div>
+                    LISTA DE PRODUTOS
                 </h3>
-                <a class="btn-floating btn-large waves-effect waves-light grey darken-1 accent-3" onclick="JavaScript:location.href='dashboardVendedor.php'">
+                <a class="btn-floating btn-large waves-effect waves-light grey darken-1 accent-3" onclick="JavaScript:location.href='dashboardCliente.php'">
                     <i class="material-icons">keyboard_backspace</i>
                 </a>
-
                 <div class="row">
                     <div class="input-field">
-                        <form action="lstVendedor.php" method="GET" id="frmBuscaVendedor" class="col s12">
+                        <form action="lstProduto.php" method="GET" id="frmBuscaProdutos" class="col s12">
                             <div class="input-field col s12">
 
-                                <input type="text" placeholder="Informe o Nome do Vendedor" class="form-control col s6" id="txtBusca" name="busca">
+                                <input type="text" placeholder="Informe o nome do Produto" class="form-control col s6" id="txtBusca" name="busca">
                                 <button class="btn waves-effect waves-light col m1" type="submit" name="action">
                                     <i class="material-icons right">search</i></button>
                             </div>
@@ -72,21 +70,21 @@ Conexao::desconectar();
                     <tr class="blue-grey darken-4  grey-text text-lighten-3">
                         <th>Id</th>
                         <th>Nome</th>
-                        <th>Email</th>
-                        <th>Telefone</th>
-                        <th>Cidade</th>
-                        <th>UF</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                        <th>Comprar</th>
                     </tr>
                     <?php
-                    foreach ($lstVendedor as $vendedor) {
+                    foreach ($lstProduto as $produto) {
                     ?>
                         <tr>
-                            <td><?php echo $vendedor['id']; ?></td>
-                            <td><?php echo $vendedor['nome']; ?></td>
-                            <td><?php echo $vendedor['email']; ?></td>
-                            <td><?php echo $vendedor['telefone']; ?></td>
-                            <td><?php echo $vendedor['cidade']; ?></td>
-                            <td><?php echo $vendedor['uf']; ?></td>
+                            <td><?php echo $produto['id']; ?></td>
+                            <td><?php echo $produto['nome']; ?></td>
+                            <td><?php echo $produto['valor']; ?></td>
+                            <td><?php echo $produto['descricao']; ?></td>
+                            <td> <a class="btn-floating btn-small waves-effect waves-light green" onclick="alert('Produto Comprado!')">
+                                    <i class="material-icons">sell</i>
+                            </td>
                         </tr>
                     <?php
                     }
@@ -98,11 +96,3 @@ Conexao::desconectar();
 </body>
 
 </html>
-
-<script>
-    function remover(id) {
-        if (confirm('Excluir o vendedor ' + id + '?')) {
-            location.href = 'remVendedor.php?id=' + id;
-        }
-    }
-</script>

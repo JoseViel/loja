@@ -2,8 +2,8 @@
 
     session_start();
     
-    unset($_SESSION['login']);
-    unset($_SESSION['pwd']); 
+    unset($_SESSION['email']);
+    unset($_SESSION['senha']); 
 
-    Header("location: login.html"); 
+    Header("location: choose.php"); 
 ?>

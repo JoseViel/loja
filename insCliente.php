@@ -9,15 +9,17 @@
     $cidade = trim($_POST['txtCidade']);
     $uf = trim($_POST['txtUf']);
     $numero = trim($_POST['txtNumero']);
+    $senha = trim($_POST['senha']);
+    $senha = md5($senha);
 
-    if (!empty($nome) && !empty($email) && !empty($telefone) && !empty($idade) && !empty($endereco) && !empty($cidade) && !empty($uf) && !empty($numero)){
+    if (!empty($nome) && !empty($email) && !empty($telefone) && !empty($idade) && !empty($endereco) && !empty($cidade) && !empty($uf) && !empty($numero) && !empty($senha)){
         $pdo = Conexao::conectar(); 
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-        $sql = "INSERT INTO cliente(nome, email, telefone, idade, endereco, cidade, uf, numero) VALUES (?,?,?,?,?,?,?,?)"; 
+        $sql = "INSERT INTO cliente(nome, email, telefone, idade, endereco, cidade, uf, numero, senha) VALUES (?,?,?,?,?,?,?,?,?)"; 
         $query = $pdo->prepare($sql);
-        $query->execute(array($nome, $email, $telefone, $idade, $endereco, $cidade, $uf, $numero));
+        $query->execute(array($nome, $email, $telefone, $idade, $endereco, $cidade, $uf, $numero, $senha));
         Conexao::desconectar(); 
     }
 
-    header("location:lstCliente.php");
+    header("location:choose.php");
 ?>

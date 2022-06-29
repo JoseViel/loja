@@ -14,15 +14,14 @@
             <div>
                 <img src="img/icone.png"> 
             </div>
-                <form method="POST">
+                <form method="POST" action="insVendedor.php">
                     <input type="text" name="txtNome" placeholder ="Nome de usuario" autofocus>
                     <input type="email" name="txtEmail" placeholder ="Email" autofocus>
                     <input type="phone" name="txtTelefone" placeholder ="Telefone" autofocus>
                     <input type="location" name="txtCidade" placeholder="Cidade" autofocus>
                     <input type="UF" name="txtUf" placeholder="UF" autofocus>
-                    <input type="password" name="senha" placeholder="Sua senha" autofocus>
-                    <input type="password" name="senha" placeholder ="Confirme sua senha" autofocus>                 
-                    <input type="submit" value="Entrar">       
+                    <input type="password" name="senha" placeholder="Sua Senha" autofocus>            
+                    <input type="submit" name="action" value="Cadastrar">       
                 </form>   
     </section>
 </body>

@@ -23,7 +23,7 @@
       <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
       <ul id="nav-mobile">
         <li><a href="choose.php">Logout</a></li>
-        <li><a href="lstProduto.php"> Produtos </a></li>
+        <li><a href="lstProdutoCliente.php"> Produtos </a></li>
       </ul>
     </div>
   </nav>
@@ -37,9 +37,11 @@
       <a href="#name"><span class="white-text name"> Cliente123 </span></a>
       <a href="#email"><span class="white-text email"> 123@gmail.com</span></a>
     </div></li>
-    <li><a style="color: white" href="choose.php"><i style="color: white;" class="material-icons">people</i>Logout</a></li>
-    <li><a style="color: white" href="lstProduto.php"><i style="color: white;" class="material-icons">sell</i>Produtos</a></li>
-   
+    <li><a style="color: white" href="logout.php"><i style="color: white;" class="material-icons">people</i>Logout</a></li>
+    <li><a style="color: white" href="lstProdutoCliente.php"><i style="color: white;" class="material-icons">sell</i>Produtos</a></li>
+    <li><a style="color: white" href="frmEdtCliente.php"><i style="color: white;" class="material-icons">face</i>Editar Dados</a></li>
+    <li><a style="color: white" href="remCliente.php"><i style="color: white;" class="material-icons" onclick="JavaScript:remover(<?php echo $cliente['id'];?>)">remove</i>Deletar Conta</a></li>
+
     <li></li>
     <!-- </div> -->
   </ul>
@@ -54,7 +56,7 @@
                         <div class="input-field">
                             <form method="GET" class="col s12" >
                                 <div class="input-field col s12">
-                               <h4 style="color: #cbd0f7"> <div style="cursor:pointer" type="button" onclick="JavaScript:location.href=''"><img class="img_icon" src="img/produto.png" height="100px" width="100px"></div>
+                               <h4 style="color: #cbd0f7"> <div style="cursor:pointer" type="button" onclick="JavaScript:location.href='lstProdutoCliente.php'"><img class="img_icon" src="img/produto.png" height="100px" width="100px"></div>
                                 Comprar                  
                                 </h4>
                                 </div>
@@ -86,5 +88,11 @@
       $(document).ready(function(){
         $('.sidenav').sidenav();
       });
+
+    function remover(id) {
+        if (confirm('Excluir o cliente ' + id + '?')) {
+            location.href = 'remCliente.php?id=' + id;
+        }
+    }
     
     </script>
