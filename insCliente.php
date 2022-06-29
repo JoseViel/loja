@@ -12,6 +12,7 @@
     $senha = trim($_POST['senha']);
     $senha = md5($senha);
 
+
     if (!empty($nome) && !empty($email) && !empty($telefone) && !empty($idade) && !empty($endereco) && !empty($cidade) && !empty($uf) && !empty($numero) && !empty($senha)){
         $pdo = Conexao::conectar(); 
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 

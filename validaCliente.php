@@ -16,7 +16,7 @@
         session_start();
         $_SESSION['email'] = $dados['email'];
         $_SESSION['senha'] = $dados['senha'];
-                header("location:dashboardCliente.php");
+        header("location:dashboardCliente.php");
        }else{
         echo "Senha ou Email Inválidos";
        }

@@ -42,17 +42,17 @@
                 <div class="input-field col s8">
                     <i class="material-icons prefix">sell</i>
                     <label for="lblNome">Informe o Nome do Produto: </label>
-                    <input type="text" class="form-control" id="txtNome" name="txtNome">
+                    <input type="text" class="form-control" id="txtNome" required name="txtNome">
                 </div>
                 <div class="input-field col s5">
                     <i class="material-icons prefix">money</i>
                     <label for="lblValor">Informe o Valor do Produto: </label>
-                    <input type="text" class="form-control" id="txtValor" name="txtValor">
+                    <input type="text" class="form-control" id="txtValor" required name="txtValor">
                 </div>
                 <div class="input-field col s5">
                     <i class="material-icons prefix">description</i>
                     <label for="lblDescricao">Informe a Descrição do Produto: </label>
-                    <input type="text" class="form-control" id="txtDescricao" name="txtDescricao">
+                    <input type="text" class="form-control" id="txtDescricao" required name="txtDescricao">
                 </div>
                 <br>
                 <div class="input-field col s8">

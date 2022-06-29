@@ -15,15 +15,15 @@
                 <img src="img/icone.png"> 
             </div>
                 <form method="POST" action="insCliente.php">
-                    <input type="text" name="txtNome" placeholder ="Nome de usuario" autofocus>
-                    <input type="email" name="txtEmail" placeholder ="Email" autofocus> 
-                    <input type="phone" name="txtTelefone" placeholder ="Telefone" autofocus>
-                    <input type="number" name="txtIdade" placeholder="Idade" autofocus>
-                    <input type="location" name="txtEndereço" placeholder="Endereço" autofocus>
-                    <input type="location" name="txtCidade" placeholder="Cidade" autofocus>
-                    <input type="UF" name="txtUf" placeholder="UF" autofocus>
-                    <input type="number" name="txtNumero" placeholder="Numero" autofocus>
-                    <input type="password" name="senha" placeholder="Sua Senha" autofocus>          
+                    <input type="text" required name="txtNome" placeholder ="Nome de usuario" autofocus>
+                    <input type="email" required name="txtEmail" placeholder ="Email" autofocus> 
+                    <input type="phone" required name="txtTelefone" placeholder ="Telefone" autofocus>
+                    <input type="number" required name="txtIdade" placeholder="Idade" autofocus>
+                    <input type="location" required name="txtEndereco" placeholder="Endereço" autofocus>
+                    <input type="location" required name="txtCidade" placeholder="Cidade" autofocus>
+                    <input type="UF" required name="txtUf" placeholder="UF" autofocus>
+                    <input type="number" required name="txtNumero" placeholder="Numero" autofocus>
+                    <input type="password" required name="senha" placeholder="Sua Senha" autofocus>          
                     <input type="submit" name="action" value="Cadastrar">       
                 </form>   
     </section>
