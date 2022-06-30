@@ -17,5 +17,3 @@
     }
 
     header("location:lstProduto.php");
-    
-?> 

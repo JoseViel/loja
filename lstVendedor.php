@@ -33,14 +33,14 @@ Conexao::desconectar();
     <!-- menu suspenso -->
     <nav class="black">
         <div class="nav-wrapper">
-        <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
-        <ul id="nav-mobile">
-        <li><a href="lstVendas.php">Vendas</a></li>
-        <li><a href="lstVendedor.php">Vendedores</a></li>
-        <li><a href="lstCliente.php">Clientes</a></li>
-        <li><a href="lstProduto.php">Produtos</a></li>
-        <li><a href="logout.php">Logout</a></li>
-        </ul>
+            <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
+            <ul id="nav-mobile">
+                <li><a href="lstVendas.php">Vendas</a></li>
+                <li><a href="lstVendedor.php">Vendedores</a></li>
+                <li><a href="lstCliente.php">Clientes</a></li>
+                <li><a href="lstProduto.php">Produtos</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
         </div>
     </nav>
 

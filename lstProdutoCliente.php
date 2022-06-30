@@ -31,16 +31,16 @@ Conexao::desconectar();
 
 <body>
 
- <!-- menu suspenso -->
- <nav class="black">
-    <div class="nav-wrapper">
-      <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
-      <ul id="nav-mobile">
-        <li><a href="lstProdutoCliente.php">Produtos</a></li>
-        <li><a href="logout.php">Logout</a></li>
-      </ul>
-    </div>
-  </nav>
+    <!-- menu suspenso -->
+    <nav class="black">
+        <div class="nav-wrapper">
+            <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
+            <ul id="nav-mobile">
+                <li><a href="lstProdutoCliente.php">Produtos</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
 
 
     <div class="container">
@@ -82,7 +82,8 @@ Conexao::desconectar();
                             <td><?php echo $produto['nome']; ?></td>
                             <td><?php echo $produto['valor']; ?></td>
                             <td><?php echo $produto['descricao']; ?></td>
-                            <td> <a class="btn-floating btn-small waves-effect waves-light green" onclick="alert('Produto Comprado!')">
+                            <td> <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:location.href='validaCompra.php?id=' +
+                          <?php echo $produto['id']; ?>">
                                     <i class="material-icons">sell</i>
                             </td>
                         </tr>

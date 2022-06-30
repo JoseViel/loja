@@ -21,5 +21,3 @@
        }else{
         echo "Senha ou Email Inválidos";
        }
-
- ?>

@@ -13,6 +13,4 @@
         Conexao::desconectar(); 
     }
 
-    header("location:logout.php"); 
-
-?>
+    header("location:logout.php");

@@ -53,7 +53,7 @@ Conexao::desconectar();
                 <a class="btn-floating btn-large waves-effect waves-light grey darken-1 accent-3" onclick="JavaScript:location.href='dashboardVendedor.php'">
                     <i class="material-icons">keyboard_backspace</i>
                 </a>
-                
+
                 <div class="row">
                     <div class="input-field">
                         <form action="lstCliente.php" method="GET" id="frmBuscaClientes" class="col s12">

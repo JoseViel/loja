@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +9,21 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Login</title>
 </head>
+
 <body>
     <section class="area-login">
         <div class="login">
             <div>
-                <img src="img/icone.png"> 
+                <img src="img/icone.png">
             </div>
-                <form method="POST" action = "validaCliente.php">
-                    <input type="text" name="email" placeholder ="Email" autofocus>
-                    <input type="password" name="senha" placeholder="Senha" autofocus>
-                    <input type="submit" name="action "value="Entrar">
-                </form>
-                <p> Ainda não tem uma conta? <a href="cadastroCliente.php">Criar uma Conta.</a></p>         
+            <form method="POST" action="validaCliente.php">
+                <input type="text" name="email" placeholder="Email" autofocus>
+                <input type="password" name="senha" placeholder="Senha" autofocus>
+                <input type="submit" name="action " value="Entrar">
+            </form>
+            <p> Ainda não tem uma conta? <a href="cadastroCliente.php">Criar uma Conta.</a></p>
         </div>
     </section>
 </body>
+
 </html>

@@ -19,5 +19,3 @@
     }
 
     header("location:lstVendedor.php");
-    
-?> 

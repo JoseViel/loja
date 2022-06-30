@@ -13,6 +13,4 @@
         Conexao::desconectar(); 
     }
 
-    header("location:lstProduto.php"); 
-
-?>
+    header("location:lstProduto.php");

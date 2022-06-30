@@ -35,17 +35,17 @@ Conexao::desconectar();
 
 <body style="background-color: #1b1f27;;">
 
-     <!-- menu suspenso -->
-     <nav class="black">
+    <!-- menu suspenso -->
+    <nav class="black">
         <div class="nav-wrapper">
-        <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
-        <ul id="nav-mobile">
-            <li><a href="lstVendas.php">Vendas</a></li>
-            <li><a href="lstVendedor.php">Vendedores</a></li>
-            <li><a href="lstCliente.php">Clientes</a></li>
-            <li><a href="lstProduto.php">Produtos</a></li>
-            <li><a href="logout.php">Logout</a></li>
-        </ul>
+            <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
+            <ul id="nav-mobile">
+                <li><a href="lstVendas.php">Vendas</a></li>
+                <li><a href="lstVendedor.php">Vendedores</a></li>
+                <li><a href="lstCliente.php">Clientes</a></li>
+                <li><a href="lstProduto.php">Produtos</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -55,9 +55,9 @@ Conexao::desconectar();
         </div>
         <div class="row">
             <form action="edtproduto.php " method="POST" id="frmEdtproduto" class="col s12">
-            <div class="input-field col s8">
-                  <h3><label for="lblId" class="black-text bold"><b>ID:  <?php echo $id;?> </b></label> </h3>
-                  <input type="hidden" name="id" id="id" value="<?php echo $id;?>">
+                <div class="input-field col s8">
+                    <h3><label for="lblId" class="black-text bold"><b>ID: <?php echo $id; ?> </b></label> </h3>
+                    <input type="hidden" name="id" id="id" value="<?php echo $id; ?>">
                 </div>
                 <br>
                 <div class="input-field col s8">

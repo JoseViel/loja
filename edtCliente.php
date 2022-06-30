@@ -22,5 +22,3 @@
     }
 
     header("location:dashboardCliente.php");
-
-?> 

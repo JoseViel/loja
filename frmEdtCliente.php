@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($_SESSION)) session_start();
+if (!isset($_SESSION)) session_start();
 
 $id = $_SESSION['id'];
 
@@ -40,7 +40,7 @@ Conexao::desconectar();
     <!-- menu suspenso -->
     <nav class="black">
         <div class="nav-wrapper">
-        <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
+            <a href="" class="brand-logo right"><img src="img/icone.png" width="60"></a>
         </div>
     </nav>
 
@@ -50,9 +50,9 @@ Conexao::desconectar();
         </div>
         <div class="row">
             <form action="edtCliente.php " method="POST" id="frmEdtCliente" class="col s12">
-            <div class="input-field col s8">
-                  <h3><label for="lblId" class="black-text bold"><b>ID:  <?php echo $id;?> </b></label> </h3>
-                  <input type="hidden" name="id" id="id" value="<?php echo $id;?>">
+                <div class="input-field col s8">
+                    <h3><label for="lblId" class="black-text bold"><b>ID: <?php echo $id; ?> </b></label> </h3>
+                    <input type="hidden" name="id" id="id" value="<?php echo $id; ?>">
                 </div>
                 <br>
                 <div class="input-field col s8">

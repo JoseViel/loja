@@ -23,4 +23,3 @@
     }
 
     header("location:choose.php");
-?>
